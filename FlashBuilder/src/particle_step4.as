@@ -5,7 +5,7 @@ package
 	import flash.display.Sprite;
 	import flash.display.StageQuality;
 	import flash.events.Event;
-	
+
 	import frocessing.color.ColorHSV;
 
 	[SWF(frameRate = "60", backgroundColor = "0x0")]
@@ -13,11 +13,11 @@ package
 	{
 		private const size:int = 20;
 		private const MAX_LIFE:int = 40; // 寿命の最大値
-		private var particle:MovieClip;
 		private var particleList:Array = [];
 		private var count:int = 0; // tick イベントの回数
 		private var hsl:ColorHSV;
 
+		/** コンストラクター */
 		public function particle_step4()
 		{
 			// 画質を下げて高速化

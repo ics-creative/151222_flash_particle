@@ -8,9 +8,9 @@ package
 	public class particle_step2 extends Sprite
 	{
 		private const size:int = 10;
-		private var particle:MovieClip;
 		private var particleList:Array = [];
 
+		/** コンストラクター */
 		public function particle_step2()
 		{
 			// for文を作成 (上限数はパーティクルの個数)
@@ -21,7 +21,7 @@ package
 				particle.graphics.beginFill(0xFF0000);
 				particle.graphics.drawCircle(0, 0, size);
 				this.addChild(particle);
-
+			
 				particle.x = stage.stageWidth * Math.random();
 				particle.y = stage.stageHeight * Math.random();
 				particle.vx = 0;

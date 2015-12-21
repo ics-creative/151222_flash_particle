@@ -8,9 +8,9 @@ package
 	public class particle_step3 extends Sprite
 	{
 		private const size:int = 3;
-		private var particle:MovieClip;
 		private var particleList:Array = [];
 
+		/** コンストラクター */
 		public function particle_step3()
 		{
 			// 時間経過
