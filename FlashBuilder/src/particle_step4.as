@@ -5,7 +5,7 @@ package
 	import flash.display.Sprite;
 	import flash.display.StageQuality;
 	import flash.events.Event;
-
+	
 	import frocessing.color.ColorHSV;
 
 	[SWF(frameRate = "60", backgroundColor = "0x0")]
@@ -24,7 +24,7 @@ package
 			stage.quality = StageQuality.MEDIUM;
 
 			// HSLカラーを作成 (Frocessingを利用)
-			hsl = new ColorHSV(0, 1.0, 0.6);
+			hsl = new ColorHSV(0, 0.7, 0); // 彩度は70%で指定
 
 			// 時間経過
 			this.addEventListener(Event.ENTER_FRAME, handleTick);
@@ -44,7 +44,8 @@ package
 			// for文を作成 (上限数はパーティクルの個数)
 			for (var i:int = 0; i < 2; i++)
 			{
-				hsl.h += 1.5;
+				hsl.h += 1.5; // 色相は時間経過で変化
+				hsl.v = 0.4 + 0.2 * Math.random(); // 明度は40%〜60%でランダム
 				var color:uint = hsl.value;
 				// 赤い丸を作成
 				var particle:MovieClip = new MovieClip();
