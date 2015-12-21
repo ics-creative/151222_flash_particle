@@ -4,7 +4,7 @@ package
 	import flash.display.Sprite;
 	import flash.events.Event;
 
-	[SWF(frameRate = "60")]
+	[SWF(frameRate = "60", backgroundColor = "0xEEEEEE")]
 	public class particle_step2 extends Sprite
 	{
 		private const size:int = 10;
