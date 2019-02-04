@@ -32,7 +32,6 @@ package
 
 			// 時間経過
 			this.addEventListener(Event.ENTER_FRAME, handleTick);
-
 		}
 
 		private function handleTick(event):void
